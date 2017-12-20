@@ -10,7 +10,7 @@ gulp.task('server', function(){
     rewriteRules: [
       {
         match: new RegExp('</head>'),
-        fn: functon(){
+        fn: function(){
           return '<script async="" src="/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="localhost:7777/css/index.css">'
         }
       }
