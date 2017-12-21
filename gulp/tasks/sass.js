@@ -29,14 +29,14 @@ var processors = [
   svginline(),
   focus(),
 
-  removePrefixes(),
+  //removePrefixes(),
   // toggle
 
-  // autoprefixer({
-  //   browsers: ['last 10 versions'],
-  //   remove: true, // remove outdated prefixes?
-  //   // cascade: false
-  // }),
+   autoprefixer({
+     browsers: ['last 10 versions'],
+     remove: true, // remove outdated prefixes?
+     // cascade: false
+   }),
   sorting(),
   pseudoel(),
   flexbugs()
