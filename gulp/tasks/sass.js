@@ -4,6 +4,7 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var removePrefixes = require('postcss-remove-prefixes')
 var short        = require('postcss-short');
 var svginline    = require('postcss-inline-svg');
 var sorting      = require('postcss-sorting');
@@ -27,11 +28,15 @@ var processors = [
   short(),
   svginline(),
   focus(),
-  autoprefixer({
-    browsers: ['last 10 versions'],
-    remove: true, // remove outdated prefixes?
-    // cascade: false
-  }),
+
+  removePrefixes(),
+  // toggle
+
+  // autoprefixer({
+  //   browsers: ['last 10 versions'],
+  //   remove: true, // remove outdated prefixes?
+  //   // cascade: false
+  // }),
   sorting(),
   pseudoel(),
   flexbugs()
