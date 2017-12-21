@@ -1,19 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="-255 334 100 125" style="enable-background:new -255 334 100 125;" xml:space="preserve">
-<style type="text/css">
-	.st0{font-family:'Arial-BoldMT';}
-	.st1{font-size:5px;}
-</style>
-<title>Levers 6.2</title>
-<desc>Created with Sketch.</desc>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="42px" height="45px" viewBox="0 0 42 45" style="enable-background:new 0 0 42 45;" xml:space="preserve">
+<defs>
+</defs>
 <g>
 	<g>
-		<path d="M-192.5,390h19.5v-2h-19.5v-3.5h-9v3.5H-215v2h13.5v3.5h9V390z M-177.5,372h4.5v-2h-4.5v-3.5h-9v3.5H-215v2h28.5v3.5h9
-			V372z M-201.5,354h28.5v-2h-28.5v-3.5h-9v3.5h-4.5v2h4.5v3.5h9V354z"/>
+		<path d="M22.5,41.5H42v-2H22.5V36h-9v3.5H0v2h13.5V45h9V41.5z M37.5,23.5H42v-2h-4.5V18h-9v3.5H0v2h28.5V27h9V23.5z M13.5,5.5H42
+			v-2H13.5V0h-9v3.5H0v2h4.5V9h9V5.5z"/>
 	</g>
 </g>
-<text transform="matrix(1 0 0 1 -244 436)" class="st0 st1">Created by Landan Lloyd</text>
-<text transform="matrix(1 0 0 1 -244 441)" class="st0 st1">from the Noun Project</text>
 </svg>
