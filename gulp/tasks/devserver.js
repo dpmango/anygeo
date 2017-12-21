@@ -11,10 +11,10 @@ gulp.task('server', function(){
       {
         match: new RegExp('</head>'),
         fn: function(){
-          return '<script async="" src="/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="localhost:7777/css/index.css">'
+          return '<script async="" src="/browser-sync/browser-sync-client.js?v=2.18.13"></script><link rel="stylesheet" type="text/css" href="http://localhost:8080/css/index.css">'
         }
       }
     ],
-    port: 7777
+    port: 8080
   })
 })

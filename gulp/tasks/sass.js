@@ -13,6 +13,7 @@ var focus        = require('postcss-focus');
 var cssnano      = require('cssnano');
 var plumber      = require('gulp-plumber');
 var config       = require('../config');
+var browserSync  = require('browser-sync');
 
 // PostCSS Processors
 // short - shorthands -- https://github.com/jonathantneal/postcss-short
@@ -64,6 +65,7 @@ gulp.task('sass', function() {
     .pipe(config.production ? util.noop() : sourcemaps.write('.'))
     .pipe(config.production ? postcss([cssnano(cssNanoParams)]) : util.noop())
     .pipe(gulp.dest(config.dest.css))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('sass:watch', function() {
