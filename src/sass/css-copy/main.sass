@@ -224,8 +224,10 @@ body
   margin-left: 43px
   img
     display: block
-    width: 107px
-    height: 18px
+    //width: 107px
+    //height: 18px
+    width: 147px
+    height: 25px
   .logo-big-size
     width: 215px
     height: 36px
@@ -572,8 +574,10 @@ body
   max-width: 1020px
   margin: auto
   padding: 25px 38px 37px
-  border: 1px solid #000
-  border-radius: 5px
+  //border: 1px solid #000
+  //border-radius: 5px
+  border: 0 !important
+  border-radius: 0 !important
   margin-bottom: 96px
 
 .search-form
@@ -581,6 +585,7 @@ body
   display: flex
   flex-direction: row
   justify-content: flex-start
+  flex-wrap: wrap
   width: 100%
   height: auto
   label
@@ -588,9 +593,12 @@ body
   input, img
     display: inline-block
   input
-    height: 35px
-    border-radius: 2px
-    border: 1px solid #000
+    //height: 35px
+    height: 60px !important
+    //border-radius: 2px
+    //border: 1px solid #000
+    border-radius: 0
+    border: 1px solid #e6d800
     width: 100%
     font-family: "GeometriaMedium", sans-serif
 
@@ -614,17 +622,19 @@ body
 .to-holder
   display: none
   position: absolute
-  top: 76px
+  top: 90px
   left: -204px
   width: 566px
   min-height: 383px
   height: 100%
-  background-color: #fffee6
-  border: 1px solid #b3a900
+  //background-color: #fffee6
+  background-color: #fff
+  border: 1px solid #e6d800
   z-index: 1000
   &:before
     content: " "
-    display: block
+    //display: block
+    display: none
     clear: both
     position: absolute
     top: -13px
@@ -645,7 +655,8 @@ body
      *        transform: rotate(45deg) translate(0, calc(-100% + 4px));
   &:after
     content: " "
-    display: block
+    //display: block
+    display: none  
     clear: both
     position: absolute
     bottom: 192px
@@ -666,19 +677,21 @@ body
      *        transform: rotate(135deg) translate(0, calc(-100% + 4px));
 
 .from-holder
-  background-color: #fffee6
-  border: 1px solid #b3a900
+  //background-color: #fffee6
+  background-color: #fff
+  border: 1px solid #e6d800
   display: none
   height: 100%
   left: 0
   min-height: 383px
   position: absolute
-  top: 76px
+  top: 90px
   width: 566px
   z-index: 1000
   &:before
     content: " "
-    display: block
+    //display: block
+    display: none
     clear: both
     position: absolute
     top: -13px
@@ -699,7 +712,8 @@ body
      *        transform: rotate(45deg) translate(0, calc(-100% + 4px));
   &:after
     content: " "
-    display: block
+    //display: block
+    display: none
     clear: both
     position: absolute
     bottom: 192px
@@ -770,11 +784,14 @@ body
       span
         position: relative
         top: -2px
-        border-bottom: 1px dotted #000
+        //border-bottom: 1px dotted #000
+        border: 0
         line-height: 1
         font-size: 15px
       input
         display: none
+      &:hover
+        background-color: #eeeeee
   > ul > li > label
     width: 165px
   .country-active
@@ -821,11 +838,14 @@ body
       span
         position: relative
         top: -4px
-        border-bottom: 1px dotted #000
+        //border-bottom: 1px dotted #000
+        border: 0
         line-height: 1
         font-size: 15px
       input
         display: none
+      &:hover
+        background-color: #eee
   > ul > li > label
     width: 165px
   .country-active
@@ -843,7 +863,7 @@ body
 
 .from-holder__town-choose
   background-color: #fff
-  border: 1px solid #b3a900
+  border: 1px solid #e6d800
   border-radius: 0 3px 3px 0
   display: none
   height: 100%
@@ -869,7 +889,7 @@ body
   width: 377px
   background-color: #fff
   transform: translate(100%, 0)
-  border: 1px solid #b3a900
+  border: 1px solid #e6d800
   border-radius: 0 3px 3px 0
 
 .town-choose__header
@@ -956,8 +976,8 @@ body
 .from-town, .to-town
   position: relative
   display: block
-  width: 193px
-  margin-right: 11px
+  width: 220px
+  margin-right: 5px
 
 .from-town > label, .to-town > label
   font-weight: 400
@@ -967,7 +987,8 @@ body
 
 .from-town > label:after, .to-town > label:after
   content: " "
-  display: block
+  //display: block
+  display: none
   clear: both
   position: absolute
   width: 35px
@@ -995,29 +1016,46 @@ body
 .from-town input, .to-town input
   position: relative
   width: 100%
-  padding: 1px 35px 0 9px
-  font-size: 15px
-  margin-top: 5px
+  padding: 10px 35px 10px 17px
+  //font-size: 15px
+  font-size: 18px
+  //margin-top: 5px
+  margin-top: 0
   background-position: 134px center
   background-repeat: no-repeat
   background-size: 14px 11px
+  
+.from-town span, .to-town span
+  font-size: 15px
+  margin-bottom: 5px
+  margin-left: 5px
+  display: inline-block
 
 .to-date, .from-date
   position: relative
   display: block
-  width: 120px
-  margin-right: 13px
+  width: 170px
+  margin-right: 5px
+
+.to-date span, .from-date span
+  display: inline-block
+  margin-bottom: 5px
+  margin-left: 5px
 
 .to-date label, .from-date label
   position: absolute
-  top: 21px
+  top: 50%
+  transform: translateY(-50%)
   right: 0
   height: 35px
   width: 35px
   z-index: 10
+  background-repeat: no-repeat
+  background-size: 100%
+  background-image: url(../../icons/date-datepicker.svg)
 
 .to-date label img, .from-date label img
-  display: block
+  display: none
   margin: auto
   position: relative
   width: 22px
@@ -1027,18 +1065,24 @@ body
 .to-date input, .from-date input
   display: block
   position: relative
+  font-family: "GeometriaMedium", sans-serif !important
+  font-weight: 600
   /*margin-top: 21px;
-  top: 22px
-  padding: 0 35px 0 10px
+  top: 0px
+  padding: 10px 35px 10px 17px
   letter-spacing: -1px
+  font-size: 18px
+  font-weight: 500
 
 .passengers
   position: relative
   display: block
-  width: 120px
-  margin-right: 13px
+  width: 140px
+  margin-right: 0px
   label
     font-weight: 400
+    font-size: 15px !important
+    margin-left: 5px
     font-size: 0.8em
     position: relative
     cursor: pointer
@@ -1052,21 +1096,26 @@ body
       top: 50%
       transform: translate(0, -50%)
     img
+      display: none
       width: 6px
       height: 14px
       left: 45px
       z-index: 10
     .minus, .plus
       display: block
-      width: 19px
-      height: 18px
-      border-radius: 2px
-      border: 1px solid #000
-      font-size: 1.2em
+      width: 30px
+      height: 30px
+      border-radius: 6px
+      border: 1px solid #bfbfbf
+      font-size: 30px
+      line-height: 30px
+      font-weight: 300 !important
+      font-family: "Geometria", sans-serif
       text-decoration: none
       color: #000
       text-align: center
       transition: all 0.4s ease
+      background-image: none !important
     .minus:hover, .plus:hover, .minus:focus, .plus:focus
       background-color: #e6e6e6
     .minus span
@@ -1094,26 +1143,29 @@ body
       background-position: center center
       background-size: auto
     input
-      font-size: 1.3em
-      padding: 0 30px 0 61px
-      font-family: "Geometria", sans-serif
+      font-size: 21px
+      padding: 0 45px 0 45px
+      text-align: center
+      font-family: "GeometriaMedium", sans-serif
 
 .search-form__btn
   display: block
   position: relative
-  height: 35px
-  width: 135px
+  height: 60px
+  width: 100%
+  max-width: 510px
+  margin-left: auto
+  margin-right: auto
   border-radius: 3px
   font-family: "GeometriaMedium", sans-serif
-  text-transform: uppercase
   color: #fff
   background-color: #ab1798
-  box-shadow: 3px 3px 0 1px black
-  margin-top: 21px
-  margin-left: -1px
-  font-size: 0.7em
+  box-shadow: 1px 1px 0 1px black
+  margin-top: 35px
+  font-size: 25px
   font-weight: 400
-  letter-spacing: 1.7px
+  letter-spacing: 0 !important
+  text-transform: none !important
   transition: background 0.4s ease
   span
     position: relative
