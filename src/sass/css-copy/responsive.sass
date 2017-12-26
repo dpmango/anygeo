@@ -1,0 +1,281 @@
+.mobile-slider
+  display: none
+  &-bottombar
+    display: none
+    
+.mobile-menu
+  display: none
+
+@media (max-width: 1023px)
+  .search-form
+    flex-direction: row
+    justify-content: space-between
+    &__btn
+      margin-left: auto
+      margin-right: auto
+      height: 45px
+  .from-town, 
+  .to-town
+    width: 49%
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 10px
+    span
+      display: block
+    input
+      margin-top: 0
+  .to-date, 
+  .from-date,
+  .passengers
+    width: 32%
+    margin-left: 0
+    margin-right: 0
+    span,
+    label
+      display: block
+      margin-bottom: 5px
+    input,
+    .passengers-number
+      margin-top: 0
+      
+  .main-header__slider-container
+    margin-bottom: 110px
+      
+  .how-it__wrapper a
+    width: 240px
+    font-size: 0.8em
+    
+@media (max-width: 767px)
+  .main-header
+    padding-top: 0
+    padding-bottom: 20px
+    &:after
+      display: none
+    &__slider-container
+      display: none
+      margin-bottom: 25px
+    &__slider-wrapper
+      #mCSB_1_scrollbar_horizontal
+        display: none !important
+        
+    // MOBILE SLIDER    
+    .mobile-slider
+      display: block
+      &__item
+        background-color: #fff
+        padding: 10px 20px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-start
+      &__descr
+        margin-right: auto
+      &__city
+        margin-top: 0
+        font-size: 18px
+        text-align: left
+        text-transform: uppercase
+      &__direction
+        font-size: 9px
+        text-transform: uppercase
+        letter-spacing: 0.2em
+        font-weight: 400
+      &__price
+        font-size: 18px
+        line-height: 22px
+        font-weight: 600
+        color: #ab1798
+        text-decoration: underline
+        margin-left: 25px
+      &__flag
+        width: 25px
+        height: 17px
+        img
+          display: block
+          height: auto
+          width: 100%
+      &-bottombar
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 10px 20px
+        background-color: #ebebeb
+        margin-bottom: 25px
+        &__link
+          text-align: left
+          font-size: 8px
+          text-transform: uppercase
+          color: #ab1798
+          margin-right: auto
+        &__swipe
+          margin-left: auto
+          text-align: right
+          font-size: 8px
+          text-transform: uppercase
+          padding-left: 15px
+          position: relative
+    &__menu
+      display: none
+    &__menu-btn
+      top: 7px
+    &__logo
+      top: 3px
+    &__enter
+      top: 5px
+    &__top-line
+      background-color: #fff
+      padding: 10px 20px
+      width: calc(100% + 20px)
+      margin-left: -10px
+    .typed-h1
+      font-size: 21px
+      margin-bottom: 22px
+      b
+        font-size: 12px
+        display: block
+    &__search-form
+      padding: 0
+      margin-bottom: 18px
+    &__descr2
+      display: none
+  .from-town, .to-town
+    width: 100%
+    margin-top: 0
+    padding-top: 0
+    margin-bottom: 5px
+    input
+      padding-top: 14px
+      font-size: 18px
+      height: 45px !important
+    span
+      font-size: 12px
+      color: #5a5a5a
+      position: absolute
+      top: 3px
+      margin-left: 10px
+      z-index: 10
+  .to-date, .from-date
+    width: 49%
+    margin-top: 0
+    padding-top: 0
+    input
+      padding-top: 14px
+      font-size: 18px
+      height: 45px !important
+    span
+      font-size: 12px
+      color: #5a5a5a
+      position: absolute
+      top: 3px
+      margin-left: 10px
+      z-index: 10
+  .passengers
+    width: 100%
+    margin-top: 5px
+    .passengers-number
+      input
+        height: 45px !important
+        padding-left: 235px
+        padding-right: 70px
+        text-align: right
+      .minus
+        left: auto
+        right: 120px
+    label
+      font-size: 12px !important
+      color: #5a5a5a
+      position: absolute
+      top: 13px
+      margin-left: 10px
+      z-index: 10
+  .search-form
+    &__btn
+      box-shadow: none
+      margin-top: 10px
+        
+  .button-to-top
+    display: none
+  .how-it__wrapper
+    a
+      border: 0
+      border-radius: 0
+      padding: 0
+      text-decoration: underline
+      text-transform: none
+      letter-spacing: 0
+      height: auto
+      font-size: 12px
+      line-height: 14px
+        
+  body
+    min-height: 100vh
+  .homepage-body
+    .first-section,
+    .second-section,
+    .third-section,
+    .fours-section,
+    .fifth-section,
+    .sixth-section,
+    .seventh-section,
+    .popular-ways,
+    .main-footer
+      display: none
+      
+  // MOBILE MENU
+  .mobile-menu
+    display: block
+    position: fixed
+    width: 100%
+    max-width: 310px
+    top: 0
+    right: 0
+    min-height: 100vh
+    z-index: 30
+    background-color: #1c1c1c
+    padding: 40px 35px
+    transform: translateX(400px)
+    visibility: hidden
+    opacity: 0
+    transition: all 0.3s
+    &.is-active
+      transform: translateX(0px)
+      opacity: 1
+      visibility: visible
+    &__topbar
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 60px
+    &__logo
+      width: 130px
+      height: 20px
+      display: block
+      margin-right: auto
+      text-align: left
+    &__close
+      font-size: 9px
+      text-transform: uppercase
+      letter-spacing: 0.2em
+      color: #fff100
+      margin-left: auto
+    &__link
+      color: #fff
+      display: block
+      padding: 12px 0
+      font-size: 18px
+      font-weight: bold
+      text-decoration: none
+      border-bottom: 1px solid #959595
+    &__login
+      margin-bottom: 55px
+      color: #fff100
+      display: block
+      padding: 12px 0
+      font-size: 18px
+      font-weight: bold
+      text-decoration: none
+      border-bottom: 1px solid #959595
+      span
+        border-bottom: 1px dashed #fff100
