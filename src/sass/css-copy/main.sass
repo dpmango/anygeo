@@ -1219,7 +1219,7 @@ body
   display: none
   z-index: 1000 !important
   border-radius: 0 0 3px 3px
-  &:before
+  &::before
     content: " "
     display: block
     clear: both
@@ -1230,6 +1230,7 @@ body
     height: 13px
     background-image: url(../images/shevron-top-date.png)
     background-position: top center
+    -webkit-background-size: 100% 100%
     background-size: 100% 100%
     background-repeat: no-repeat
     /*width: 17px;
@@ -1241,105 +1242,220 @@ body
      *    -ms-transform: rotate(45deg) translate(0, calc(-100% + 4px));
      *        transform: rotate(45deg) translate(0, calc(-100% + 4px));
 
-.ui-datepicker-header
-  padding: 13px 20px 10px
-  background-color: #f3f3f3
-  position: relative
-  .ui-datepicker-title
+  .ui-datepicker-header
+    padding: 13px 20px 10px
+    background-color: #f3f3f3
+    position: relative
+    .ui-datepicker-title
+      display: -webkit-flex
+      display: -moz-flex
+      display: -ms-flex
+      display: -o-flex
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-orient: horizontal
+      -webkit-box-direction: normal
+      -webkit-flex-direction: row
+      -ms-flex-direction: row
+      flex-direction: row
+      -webkit-box-pack: center
+      -webkit-justify-content: center
+      -ms-flex-pack: center
+      justify-content: center
+      span
+        display: inline-block
+        font-size: 1.2em
+    .ui-datepicker-prev, .ui-datepicker-next
+      position: absolute
+      display: block
+      top: 50%
+      -webkit-transform: translate(0, -50%)
+      -ms-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      cursor: pointer
+    .ui-datepicker-prev::after, .ui-datepicker-next::after
+      content: " "
+      display: block
+      clear: both
+      position: absolute
+      top: 50%
+      -webkit-transform: translate(0, -50%)
+      -ms-transform: translate(0, -50%)
+      transform: translate(0, -50%)
+      border: 4px solid transparent
+    .ui-datepicker-prev::after
+      left: 0
+      border-right: 8px solid #000
+    .ui-datepicker-next
+      &::after
+        right: 0
+        border-left: 8px solid #000
+      span
+        display: block
+    .ui-datepicker-prev
+      left: 20px
+      height: 30px
+      width: 30px
+    .ui-datepicker-next
+      right: 20px
+      height: 30px
+      width: 30px
+  
+  /*
+   *.ui-datepicker-header .ui-datepicker-prev {
+   *  left: 20px;
+   *}
+   *.ui-datepicker-header .ui-datepicker-next {
+   *  right: 20px;
+   *}
+  
+  .ui-datepicker-calendar
+    background-color: #fff
+    width: 100%
+    padding: 19px 20px 10px
+    display: -webkit-flex
+    display: -moz-flex
+    display: -ms-flex
+    display: -o-flex
+    display: -webkit-box
+    display: -ms-flexbox
     display: flex
-    flex-direction: row
-    justify-content: center
-    span
-      display: inline-block
-      font-size: 1.2em
-  .ui-datepicker-prev, .ui-datepicker-next
-    position: absolute
-    display: block
-    top: 50%
-    transform: translate(0, -50%)
-    cursor: pointer
-  .ui-datepicker-prev:after, .ui-datepicker-next:after
-    content: " "
-    display: block
-    clear: both
-    position: absolute
-    top: 50%
-    transform: translate(0, -50%)
-    border: 4px solid transparent
-  .ui-datepicker-prev:after
-    left: 0
-    border-right: 8px solid #000
-  .ui-datepicker-next
-    &:after
-      right: 0
-      border-left: 8px solid #000
-    span
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -webkit-flex-direction: column
+    -ms-flex-direction: column
+    flex-direction: column
+    thead
       display: block
-  .ui-datepicker-prev
-    left: 20px
-    height: 30px
-    width: 30px
-  .ui-datepicker-next
-    right: 20px
-    height: 30px
-    width: 30px
-
-/*
- *.ui-datepicker-header .ui-datepicker-prev {
- *  left: 20px;
- *}
- *.ui-datepicker-header .ui-datepicker-next {
- *  right: 20px;
- *}
-
-.ui-datepicker-calendar
-  background-color: #fff
-  width: 100%
-  padding: 19px 20px 10px
-  display: flex
-  flex-direction: column
-  thead
-    display: block
-    tr
-      margin-bottom: 8px
-      width: 100%
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      th
+      tr
+        margin-bottom: 8px
+        width: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -webkit-flex-direction: row
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-pack: justify
+        -webkit-justify-content: space-between
+        -ms-flex-pack: justify
+        justify-content: space-between
+        th
+          display: block
+      span
+        font-family: "GeometriaMedium", sans-serif
+        font-family: "Geometria", sans-serif
+        font-size: 0.8em
+        color: #000
         display: block
-    span
-      font-family: "GeometriaMedium", sans-serif
-      font-family: "Geometria", sans-serif
-      font-size: 0.8em
-      color: #000
+        width: 100%
+        text-align: center
+    tbody
       display: block
-      width: 100%
+      tr
+        margin-bottom: 2px
+        width: 100%
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: -webkit-box
+        display: -ms-flexbox
+        display: flex
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        -webkit-flex-direction: row
+        -ms-flex-direction: row
+        flex-direction: row
+        -webkit-box-pack: justify
+        -webkit-justify-content: space-between
+        -ms-flex-pack: justify
+        justify-content: space-between
+        td
+          display: block
+      a
+        &:after
+          -webkit-transition: all 0.4s ease
+          transition: all 0.4s ease
+        &:hover::after
+          content: " "
+          display: block
+          clear: both
+          position: absolute
+          top: -1px
+          left: -8px
+          background-color: #fff100
+          border-radius: 50px
+          width: 36px
+          height: 36px
+          z-index: -1
+        color: #000
+        font-weight: normal
+        font-size: 12px
+        display: block
+        text-align: center
+        text-decoration: none
+        width: 21px
+        line-height: 34px
+        position: relative
+        z-index: 10
+      .ui-state-disabled
+        color: #000
+        font-weight: normal
+        font-size: 12px
+        display: block
+        text-align: center
+        text-decoration: none
+        width: 21px
+        line-height: 34px
+        position: relative
+        z-index: 10
+    .ui-calendar-highlight .ui-state-default
+      position: relative
+      &::after
+        content: " "
+        display: block
+        clear: both
+        position: absolute
+        top: -1px
+        left: -8px
+        background-color: #fff100
+        border-radius: 0
+        width: 40px
+        height: 36px
+        z-index: -1
+    .ui-calendar-highlight-last .ui-state-default::after
+      border-radius: 0 50px 50px 0
+    .ui-calendar-highlight-first .ui-state-default::after
+      border-radius: 50px 0 0 50px
+    .ui-state-disabled span
+      color: #7f7f7f
+      font-weight: normal
+      /*font-size: 0.8em;
+      display: block
       text-align: center
-  tbody
-    display: block
-    tr
-      margin-bottom: 2px
-      width: 100%
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      td
-        display: block
-    a
-      color: #000
-      font-weight: 400
+      text-decoration: none
+      cursor: default
+    .ui-datepicker-week-end
+      a, span
+        color: #ab1798
+    .ui-datepicker-other-month a
+      color: #7f7f7f
+      font-weight: normal
       font-size: 0.8em
       display: block
       text-align: center
       text-decoration: none
-      width: 21px
-      line-height: 34px
+    .ui-state-active
       position: relative
-      z-index: 10
-      &:after
-        transition: all 0.4s ease
-      &:hover:after, &:focus:after
+      &::after
         content: " "
         display: block
         clear: both
@@ -1351,124 +1467,57 @@ body
         width: 36px
         height: 36px
         z-index: -1
-      color: #000
-      font-weight: 400
-      font-size: 12px
+  
+  .ui-datepicker-buttonpane
+    padding: 17px 20px
+    background-color: #f3f3f3
+    .ui-datepicker-current, .ui-datepicker-close
+      display: none
+    .ui-datepicker-clear
       display: block
-      text-align: center
-      text-decoration: none
-      width: 21px
-      line-height: 34px
-      position: relative
-      z-index: 10
-    .ui-state-disabled
-      color: #000
-      font-weight: 400
-      font-size: 12px
-      display: block
-      text-align: center
-      text-decoration: none
-      width: 21px
-      line-height: 34px
-      position: relative
-      z-index: 10
-  .ui-calendar-highlight .ui-state-default
-    position: relative
-    &:after
-      content: " "
-      display: block
-      clear: both
-      position: absolute
-      top: -1px
-      left: -8px
-      background-color: #fff100
-      border-radius: 0
-      width: 40px
-      height: 36px
-      z-index: -1
-  .ui-calendar-highlight-last .ui-state-default:after
-    border-radius: 0 50px 50px 0
-  .ui-calendar-highlight-first .ui-state-default:after
-    border-radius: 50px 0 0 50px
-  .ui-state-disabled span
-    color: #7f7f7f
-    font-weight: 400
-    /*font-size: 0.8em;
-    display: block
-    text-align: center
-    text-decoration: none
-    cursor: default
-  .ui-datepicker-week-end
-    a, span
+      margin: auto
+      text-transform: uppercase
+      width: 230px
+      height: 30px
+      border: 1px solid #ab1798
+      border-radius: 15px
+      font-family: "GeometriaMedium", sans-serif
+      font-weight: normal
       color: #ab1798
-  .ui-datepicker-other-month a
-    color: #7f7f7f
-    font-weight: 400
-    font-size: 0.8em
+      font-size: 0.8em
+      line-height: 1
+      -webkit-transition: all 0.4s ease
+      -o-transition: all 0.4s ease
+      transition: all 0.4s ease
+      span
+        position: relative
+        top: 1px
+      &:hover
+        background-color: #ab1798
+        color: #fff
+  
+  .ui-datepicker-all__dates
     display: block
-    text-align: center
-    text-decoration: none
-  .ui-state-active
     position: relative
-    &:after
-      content: " "
-      display: block
-      clear: both
-      position: absolute
-      top: -1px
-      left: -8px
-      background-color: #fff100
-      border-radius: 50px
-      width: 36px
-      height: 36px
-      z-index: -1
-
-.ui-datepicker-buttonpane
-  padding: 17px 20px
-  background-color: #f3f3f3
-  .ui-datepicker-current, .ui-datepicker-close
-    display: none
-  .ui-datepicker-clear
-    display: block
-    margin: auto
-    text-transform: uppercase
     width: 230px
     height: 30px
-    border: 1px solid #ab1798
-    border-radius: 15px
+    text-transform: uppercase
+    color: #000
     font-family: "GeometriaMedium", sans-serif
-    font-weight: 400
-    color: #ab1798
-    font-size: 0.8em
-    line-height: 1
+    font-weight: normal
+    font-size: 12px
+    border: 1px solid #000
+    border-radius: 15px
+    margin: 15px auto
+    -webkit-transition: all 0.4s ease
+    -o-transition: all 0.4s ease
     transition: all 0.4s ease
     span
       position: relative
       top: 1px
-    &:hover, &:focus
-      background-color: #ab1798
-      color: #fff
-
-.ui-datepicker-all__dates
-  display: block
-  position: relative
-  width: 230px
-  height: 30px
-  text-transform: uppercase
-  color: #000
-  font-family: "GeometriaMedium", sans-serif
-  font-weight: 400
-  font-size: 12px
-  border: 1px solid #000
-  border-radius: 15px
-  margin: 15px auto
-  transition: all 0.4s ease
-  span
-    position: relative
-    top: 1px
-  &:hover, &:focus
-    background-color: #000
-    color: #fff212
+    &:hover
+      background-color: #000
+      color: #fff212
 
 .how-it__video-wrapper_visible
   transform: scale(1) !important
