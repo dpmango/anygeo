@@ -123,11 +123,24 @@
       top: 3px
     &__enter
       top: 5px
+      display: none !important
+    &__user
+      display: block
+      float: right
+      position: relative
+      margin-right: 17px
+      top: 3px
+      width: 25px
+      height: 25px
+      img
+        display: block
+        height: 100%
+        width: 100%
     &__top-line
       background-color: #fff
       padding: 10px 20px
-      width: calc(100% + 20px)
-      margin-left: -10px
+      width: calc(100% + 30px)
+      margin-left: -15px
     .typed-h1
       font-size: 21px
       margin-bottom: 22px
@@ -210,6 +223,17 @@
         
   body
     min-height: 100vh
+  .user-is-login
+    .mobile-menu
+      &__login
+        display: none
+      &__subscr
+        display: block
+      &__name
+        display: block
+      &__logout
+        display: block
+    
   .homepage-body
     .first-section,
     .second-section,
@@ -224,7 +248,8 @@
       
   // MOBILE MENU
   .mobile-menu
-    display: block
+    display: flex
+    flex-direction: column
     position: fixed
     width: 100%
     max-width: 310px
@@ -268,6 +293,21 @@
       font-weight: bold
       text-decoration: none
       border-bottom: 1px solid #959595
+      > span
+        border-bottom: 1px dotted #fff100
+        color: #fff100
+      h3
+        font-size: 9px
+        color: #fff
+        margin: 0
+        text-transform: uppercase
+        letter-spacing: 0.2em
+        span
+          display: inline
+          color: #fff100
+          &:before,
+          &:after
+            display: none !important
     &__login
       margin-bottom: 55px
       color: #fff100
@@ -277,5 +317,15 @@
       font-weight: bold
       text-decoration: none
       border-bottom: 1px solid #959595
-      span
-        border-bottom: 1px dashed #fff100
+      > span
+        border-bottom: 1px dotted #fff100
+        color: #fff100
+    &__subscr
+      margin-bottom: 15px
+      display: none
+    &__name
+      display: none
+    &__logout
+      display: none
+      border: 0
+      margin-top: auto
