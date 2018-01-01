@@ -46,17 +46,25 @@
     font-size: 0.8em
     
 @media (max-width: 767px)
+  .main-wrapper-login
+    display: none
+  .header-middle__text
+    display: none
   .main-header
     padding-top: 0
     padding-bottom: 20px
     &:after
       display: none
+    &__small-line
+      padding: 10px 0
     &__slider-container
       display: none
       margin-bottom: 25px
     &__slider-wrapper
       #mCSB_1_scrollbar_horizontal
         display: none !important
+    &__enter-other a
+      top: -9px
         
     // MOBILE SLIDER    
     .mobile-slider
@@ -329,3 +337,315 @@
       display: none
       border: 0
       margin-top: auto
+      
+      
+  ////////////
+  /// FOOTER
+  ////////////
+  .main-footer__wrapper-bg
+    float: none
+    margin: 0 auto
+    width: 100%
+    text-align: center
+    padding-top: 30px
+    padding-bottom: 40px
+  .main-footer__who-made 
+    float: none
+    margin: 0 auto
+    width: 100%
+    text-align: center
+    .footer-logo__wrapper img
+      margin: 0 auto
+      width: 120px
+      height: 20px
+    > p
+      font-size: 12px
+      line-height: 18px
+      margin-bottom: 8px
+  .footer
+    &__menu_site-links
+      float: none
+      margin: 0 auto
+      width: 100%
+      text-align: center
+      margin-top: 0
+      ul
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+      li
+        font-size: 12px
+        margin: 0 10px
+        &:first-child
+          display: none
+    &__support
+      float: none
+      margin: 0 auto
+      width: 100%
+      text-align: center
+      margin-top: 13px
+      ul
+      li
+        font-size: 12px
+        margin: 0
+        &:first-child
+          display: none
+        &:nth-child(2)
+          margin-bottom: 15px
+        &:last-child
+          img
+            right: -5px
+        a
+          font-size: 12px
+      a
+        font-size: 12px
+  .mail-us
+    display: none
+      
+      
+  //////////////
+  /// PRICING PLANS/ SUCCESS REG
+  /////////////
+  .rate-plans, .rate-plans__bottom
+    padding-top: 30px
+    .section-header
+      margin-bottom: 25px
+  .section-header
+    margin-bottom: 25px
+    h2
+      font-size: 21px
+    p
+      font-size: 12px
+      
+  .fifth-section.onpage_subscribe
+    padding: 30px 0
+    &:after
+      display: none
+  .sixth-section
+    padding: 30px 0
+    &:after
+      display: none !important
+    .section-header
+      margin-bottom: 15px
+      h2
+        font-size: 21px
+        left: 0
+        margin: 0
+  .about-us
+    &__wrapper
+      justify-content: center
+      margin-bottom: 5px
+    &__descr
+      p
+        font-size: 12px
+        line-height: 18px
+    ul
+      li
+        margin-left: 5px
+        margin-right: 5px
+        margin-bottom: 10px
+  .why-pay
+    padding: 30px 0
+    &:after
+      display: none !important
+    .section-header
+      margin-bottom: 25px
+    &__container
+      padding: 30px 40px
+      border: 0
+      border-radius: 0
+      height: auto
+      &-wrapper
+        border: 0
+        border-radius: 0
+        height: auto !important
+        margin-bottom: 20px
+        width: calc(100% + 30px)
+        margin-left: -15px
+        &:after
+          display: none !important
+        &:before
+          display: none !important
+      > img
+        display: none
+      > h3
+        font-size: 18px
+        margin-top: 0
+        margin-bottom: 18px
+      > h4
+        font-size: 12px
+        line-height: 18px
+        margin-bottom: 13px
+      > p
+        font-size: 12px
+        line-height: 18px
+    &__wrapper
+      > p
+        top: 0
+        left: 0
+        font-size: 12px
+  .what-you-get
+    padding: 30px 0
+    &:after
+      display: none !important
+    &__wrapper
+      float: none
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      align-items: stretch
+      margin-left: -5px
+      margin-right: -5px
+      &:after
+        display: none !important
+      &:before
+        display: none !important
+      > p
+        display: none
+    &__container
+      float: none
+      height: auto
+      font-weight: normal
+      width: calc(50% - 20px)
+      margin-left: 5px
+      margin-right: 5px
+      margin-bottom: 10px
+      > p
+        font-size: 12px
+        line-height: 18px
+      
+  .seventh-section
+    padding: 30px 0
+    &:after
+      display: none !important
+  .reviews-slider
+    &__wrapper 
+      background-image: none !important
+      min-height: 1px
+      height: auto
+      margin: 0 auto
+      width: calc(100% + 30px)
+      margin-left: -15px
+      .reviews-slide
+        height: auto
+        background-color: #fff
+        padding: 30px 0
+        font-size: 12px
+        line-height: 18px
+      .reviews-descr
+        padding: 0
+        margin: 0 auto
+        max-width: 85%
+      .reviews-author 
+        bottom: -40px
+        right: 15px
+        p
+          font-size: 9px
+          line-height: 12px
+          
+          
+  ////////////////
+  /// PAYMENT PAGES
+  ////////////////
+  .not-transfer-section
+    padding: 30px 0
+    &__header
+      margin-bottom: 25px
+      h1
+        font-size: 21px
+        line-height: 24px
+        letter-spacing: 0.1em
+      p
+        font-size: 12px
+        line-height: 18px
+        
+  .transfer-retry 
+    > p
+      display: none
+  .retry-pay-wrapper
+    display: none
+  .transfer-retry-container
+    padding: 0
+  .retry-pay-else-btn
+    width: 100%
+    font-size: 15px
+    text-align: center
+    height: 45px
+    background-color: #ab1798
+    color: #fff
+    box-shadow: none
+    margin-bottom: 25px
+    letter-spacing: 0em
+    max-width: 330px
+    margin-left: auto
+    margin-right: auto
+    text-transform: none
+  .retry-pay-callback p > a img
+    display: none
+    
+  .transfer-data
+    padding-top: 30px
+    padding-bottom: 0
+    &:after
+      display: none
+    + .transfer-search
+      display: none
+    &__header
+      margin-bottom: 0px
+      h1
+        font-size: 21px
+        line-height: 24px
+        letter-spacing: 0.1em
+      p
+        font-size: 12px
+        line-height: 18px
+  .transfer-data-container
+    padding: 0
+    width: calc(100% + 30px)
+    margin-left: -15px
+    p
+      font-size: 12px
+      line-height: 18px
+    .fifth-section__video-wrapper
+      height: auto
+      padding-left: 15px
+      padding-right: 15px
+      padding-top: 50px
+      padding-bottom: 20px
+      box-shadow: none
+      background-color: #fff100
+      margin-top: 0
+      iframe
+        height: 300px
+      p
+        font-size: 21px
+        line-height: 24px
+        text-transform: uppercase
+        margin-top: 0
+        text-align: center
+        letter-spacing: 0.1em
+        margin-bottom: 20px
+        max-width: 90%
+        margin-left: auto
+        margin-right: auto
+  .transfer-user-data
+    display: none
+  .change-user-data
+    width: 100%
+    font-size: 15px
+    text-align: center
+    height: 45px
+    background-color: #ab1798
+    color: #fff
+    box-shadow: none
+    margin-bottom: 25px
+    letter-spacing: 0em
+    max-width: 330px
+    margin-top: 25px
+    margin-left: auto
+    margin-right: auto
+    text-transform: none
+    span
+      top: 5px
